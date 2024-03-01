@@ -494,7 +494,7 @@ elif question == '5. Which videos have the highest number of likes, and what are
     t5 = mycursor.fetchall()
     st.write(pd.DataFrame(t5, columns=["video Title","channel Name","like Count"]))
 
-elif question == '6.What is the total number of likes and dislikes for each video, and what are their corresponding video names? ':
+elif question == '6. What is the total number of likes and dislikes for each video, and what are their corresponding video names?':
     query6 = '''select videolikecount, videotitle from videodetails;'''
     mycursor.execute(query6)
     
@@ -502,7 +502,7 @@ elif question == '6.What is the total number of likes and dislikes for each vide
     st.write(pd.DataFrame(t6, columns=["like count","video title"]))    
 
 elif question == '7. What is the total number of views for each channel, and what are their corresponding channel names?':
-    query7 = "select channel_name, ch_views from channels;"
+    query7 = "select channel_name, channel_views from channels;"
     mycursor.execute(query7)
     
     t7=mycursor.fetchall()
